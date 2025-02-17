@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tristeza</title>
+  <style>
+    body {
+      background-image: url('https://imgur.com/amBK58x'); /* Cambia esto por la ruta de tu imagen */
+      background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+      background-position: center center; /* Centra la imagen */
+      background-repeat: no-repeat; /* Evita que la imagen se repita */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      height: 100vh; /* Asegura que la altura de la página sea 100% de la vista */
+      overflow: hidden; /* Elimina la barra de desplazamiento */
+      color: #100f5f; /* Color blanco neón para las letras */
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff; /* Blanco neón */
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      color: #ffffff; /* Blanco neón */
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 16px;
+      color: #ffffff; /* Blanco neón */
+      line-height: 1.6;
+    }
+
+    .boton-cuentame {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 200px;
+      height: 50px;
+      background-color: #a54986;
+      color: white;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .boton-cuentame:hover {
+      background-color: #A770DB;
+    }
+
+    .volver-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: #a54986;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .volver-btn:hover {
+      background-color: #8c4375;
+    }
+
+    .solucion {
+      position: fixed;
+      bottom: 120px;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      color: #ffffff; /* Blanco neón */
+      margin-top: 30px;
+    }
+
+    .solucion a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #a54986;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .solucion a:hover {
+      background-color: #A770DB;
+    }
+
+    /* Estilos para los cuadros cuadrados */
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .cuadro {
+      padding: 30px;
+      background-color: #4a31bb9f;
+      border: 1px solid #100f5f;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    /* Centrar el texto dentro del cuadro */
+    .cuadro .contenido {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff; /* Blanco neón */
+      z-index: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    /* La parte de atrás del cuadro (la que se girará) */
+    .cuadro .informacion {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #100f5f73;
+      display: none;
+      padding: 20px;
+      border: 1px solid #0f0668;
+      border-radius: 5px;
+      color: #ffffff;
+      box-sizing: border-box;
+      z-index: 0;
+      transform: rotateY(180deg); /* Parte posterior gira */
+    }
+
+    /* Mostrar la parte de atrás del cuadro al pasar el puntero */
+    .cuadro:hover .informacion {
+      display: block;
+    }
+
+    /* Hacer que el cuadro gire solo */
+    .cuadro:hover {
+      transform: rotateY(180deg);
+    }
+
+    /* Cuando el cuadro gira, hacer que el título desaparezca */
+    .cuadro:hover .contenido {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Has seleccionado Tristeza</h1>
+
+  <div class="section">
+    <h2>Esta informacion podria ser de tu interés</h2>
+
+    <div class="container">
+      <!-- Cuadro 1 - ¿Qué es la tristeza? -->
+      <div class="cuadro">
+        <div class="contenido">
+          ¿Qué es la tristeza?
+        </div>
+        <div class="informacion">
+          La tristeza es una emoción humana natural que aparece cuando enfrentamos pérdidas, desilusiones o situaciones difíciles. Aunque puede ser dolorosa, también cumple una función importante al permitirnos procesar nuestras emociones y encontrar una forma de adaptarnos.
+        </div>
+      </div>
+
+      <!-- Cuadro 2 - Síntomas de una tristeza profunda -->
+      <div class="cuadro">
+        <div class="contenido">
+          Síntomas de una tristeza profunda
+        </div>
+        <div class="informacion">
+          La tristeza intensa puede manifestarse de diversas maneras, como:
+          <ul>
+            <li>Sensación constante de vacío o desesperanza.</li>
+            <li>Pérdida de interés en actividades que antes eran agradables.</li>
+            <li>Cansancio excesivo y falta de energía.</li>
+            <li>Cambios significativos en el apetito o en el peso.</li>
+            <li>Dificultad para concentrarse o tomar decisiones.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cuadro 3 - Consecuencias de una tristeza no gestionada -->
+      <div class="cuadro">
+        <div class="contenido">
+          Consecuencias de una tristeza no gestionada
+        </div>
+        <div class="informacion">
+          Cuando la tristeza no se aborda adecuadamente, puede dar lugar a:
+          <ul>
+            <li>Desarrollo de trastornos emocionales, como la depresión.</li>
+            <li>Aislamiento social y deterioro de relaciones importantes.</li>
+            <li>Problemas de salud física, como insomnio o dolores crónicos.</li>
+            <li>Dificultades en el ámbito laboral o académico.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cuadro 4 - ¿Por qué es importante buscar ayuda? -->
+      <div class="cuadro">
+        <div class="contenido">
+          ¿Por qué es importante buscar ayuda?
+        </div>
+        <div class="informacion">
+          Hablar sobre tus sentimientos con alguien de confianza puede marcar una gran diferencia. Ya sea un amigo cercano, un familiar o un profesional, compartir lo que sientes ayuda a aliviar la carga emocional y encontrar posibles soluciones.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="solucion">
+    <h2>¿Cómo lograr salir de la tristeza?</h2>
+    <a href="tristeza2.html">Explorar consejos y soluciones</a>
+  </div>
+
+  <button class="boton-cuentame" onclick="window.location.href='escribir.html'">Cuéntame tu día</button>
+
+  <a href="../index.html" class="volver-btn">Volver</a>
+
+</body>
+</html>

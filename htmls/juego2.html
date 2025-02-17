@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JUEGO DE MEMORIA</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      flex-direction: column;
+      background-image: url('https://imgur.com/a8FxonK'); /* Ruta de tu imagen */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      color: #52045c;
+      margin-bottom: 20px;
+      font-size: 36px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px;
+      background-color: rgba(247, 247, 247, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #8c4b94;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      user-select: none;
+    }
+
+    .hidden {
+      background-color: #ddd;
+      color: #ddd;
+    }
+
+    .matched {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #8c4b94;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      background-color: #6f287f;
+    }
+  </style>
+</head>
+<body>
+  <h1>JUEGO DE MEMORIA</h1>
+  <div class="game-board" id="gameBoard"></div>
+
+  <div class="button-container">
+    <button onclick="restartGame()">Volver a jugar</button>
+    <button onclick="goBack()">Volver atrás</button>
+  </div>
+
+  <script>
+    const emojis = ['🌟', '🌌', '🌴', '🐈', '🎉', '💨', '🌟', '🌌', '🌴', '🐈', '🎉', '💨'];
+    let shuffledEmojis = emojis.sort(() => 0.5 - Math.random());
+
+    const gameBoard = document.getElementById('gameBoard');
+    let selectedCards = [];
+    let matchedCards = [];
+
+    // Función para barajar las cartas y reiniciar el juego
+    function restartGame() {
+      shuffledEmojis = emojis.sort(() => 0.5 - Math.random());
+      gameBoard.innerHTML = ''; // Limpiar las cartas actuales
+      matchedCards = [];
+      selectedCards = [];
+      createCards();
+    }
+
+    // Crear las cartas en el tablero
+    function createCards() {
+      shuffledEmojis.forEach((emoji, index) => {
+        const card = document.createElement('div');
+        card.classList.add('card', 'hidden');
+        card.setAttribute('data-index', index);
+        card.setAttribute('data-emoji', emoji);
+        card.addEventListener('click', flipCard);
+        gameBoard.appendChild(card);
+      });
+    }
+
+    // Función para voltear una carta
+    function flipCard() {
+      if (selectedCards.length < 2 && !this.classList.contains('matched')) {
+        this.classList.remove('hidden');
+        this.textContent = this.getAttribute('data-emoji');
+        selectedCards.push(this);
+      }
+
+      if (selectedCards.length === 2) {
+        setTimeout(checkMatch, 500);
+      }
+    }
+
+    // Comprobar si las cartas coinciden
+    function checkMatch() {
+      const [card1, card2] = selectedCards;
+
+      if (card1.getAttribute('data-emoji') === card2.getAttribute('data-emoji')) {
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        matchedCards.push(card1, card2);
+      } else {
+        card1.classList.add('hidden');
+        card2.classList.add('hidden');
+        card1.textContent = '';
+        card2.textContent = '';
+      }
+
+      selectedCards = [];
+
+      if (matchedCards.length === emojis.length) {
+        setTimeout(() => alert('¡Felicidades! Has encontrado todas las parejas.'), 300);
+      }
+    }
+
+    // Función para volver a la página anterior
+    function goBack() {
+      window.history.back();
+    }
+
+    // Inicializar el juego
+    createCards();
+  </script>
+</body>
+</html>

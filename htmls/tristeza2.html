@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salir de la Tristeza</title>
+  <style>
+    body {
+      background-image: url('https://imgur.com/EMMNhQj');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: rgb(163, 75, 163);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      text-align: center;
+      color: #a54986;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 40px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 0 20px;
+      padding: 0 20px;
+    }
+
+    .section {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 230px;
+    }
+
+    .section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .section h2 {
+      color: #a54986;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Cuadro de botones "¿Necesitas distraerte?" ajustado */
+    .distraerse-izquierda {
+      text-align: center;
+      position: fixed;
+      left: 30px;
+      bottom: 20px; /* Moví el cuadro más abajo */
+      width: 280px;
+      height: 130px; /* Ajusté el alto para que sea más pequeño */
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .distraerse-izquierda h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .botones-distraerse {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    /* Cuadro "¿Necesitas hablar con alguien?" */
+    .mensaje-derecha {
+      text-align: center;
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+      width: 220px;
+      height: 230px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .boton-cuentame {
+      padding: 12px 25px;
+      background-color: #a54986;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: inline-block;
+      width: 180px;
+      text-align: center;
+    }
+
+    .boton-cuentame:hover {
+      background-color: #A770DB;
+    }
+
+    .botones-extremos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    /* Cuadros de contenido */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .section {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 230px;
+    }
+
+    .section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Consejos para Superar la Tristeza</h1>
+
+  <div class="container">
+    <div class="section">
+      <h2>1. Permítete sentir y aceptar tus emociones</h2>
+      <p>Aceptar que estás triste es el primer paso. No te juzgues por sentirte así, y comprende que es una emoción válida que todos experimentan en algún momento.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Habla con alguien en quien confíes</h2>
+      <p>Compartir tus pensamientos y emociones con un amigo, familiar o terapeuta puede ayudarte a desahogarte y obtener nuevas perspectivas.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. Practica actividades que disfrutes</h2>
+      <p>Aunque pueda ser difícil al principio, hacer actividades que solías disfrutar, como escuchar música, pintar o pasear al aire libre, puede mejorar tu estado de ánimo.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. Establece una rutina saludable</h2>
+      <p>Incorpora hábitos como una alimentación balanceada, ejercicio regular y horas de sueño adecuadas. Estas prácticas pueden influir positivamente en tu bienestar emocional.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Busca ayuda profesional si es necesario</h2>
+      <p>Si sientes que la tristeza persiste o interfiere gravemente con tu vida diaria, no dudes en buscar apoyo de un psicólogo o terapeuta calificado.</p>
+    </div>
+  </div>
+
+  <!-- Cuadro de "¿Necesitas distraerte?" -->
+  <div class="distraerse-izquierda">
+    <h2>¿Necesitas distraerte?</h2>
+    <div class="botones-distraerse">
+      <button class="boton-cuentame" onclick="window.location.href='distraccion.html'">Me encantaría</button>
+      <button class="boton-cuentame" onclick="window.location.href='tristeza.html'">Regresar a Tristeza</button>
+    </div>
+  </div>
+
+  <!-- Cuadro de "¿Necesitas hablar con alguien?" -->
+  <div class="mensaje-derecha">
+    <h2>¿Necesitas hablar con alguien?</h2>
+    <p>Puedo ayudarte a procesar lo que sientes. Estoy aquí para escucharte.</p>
+    <button class="boton-cuentame" onclick="window.location.href='escribir.html'">Cuéntame tu día</button>
+  </div>
+
+</body>
+</html>

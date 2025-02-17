@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansiedad</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://imgur.com/hLw2QuD');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 40px;
+      margin-top: 200px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 50px;
+      padding: 20px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .section {
+      height: 200px;
+      background-color: rgba(255, 182, 193, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+    }
+
+    .section h2 {
+      color: #a54986;
+      font-size: 20px;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .section .info {
+      display: none;
+      font-size: 14px;
+      color: #333;
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .section:hover h2 {
+      display: none;
+    }
+
+    .section:hover .info {
+      display: block;
+    }
+
+    .boton-cuentame, .volver-btn {
+      position: fixed;
+      bottom: 20px;
+      padding: 15px 30px;
+      background-color: #a54986;
+      color: white;
+      border-radius: 50px;
+      font-size: 18px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+
+    .boton-cuentame:hover, .volver-btn:hover {
+      background-color: #A770DB;
+    }
+
+    .boton-cuentame {
+      right: 20px;
+    }
+
+    .volver-btn {
+      left: 20px;
+    }
+
+    .solucion {
+      margin-top: 40px;
+      text-align: center;
+      color: #a54986;
+    }
+
+    .solucion a {
+      padding: 15px 30px;
+      background-color: #a54986;
+      color: white;
+      font-size: 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .solucion a:hover {
+      background-color: #A770DB;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Has seleccionado Ansiedad</h1>
+
+  <div class="container">
+    <div class="section">
+      <h2>¿Qué es la ansiedad?</h2>
+      <div class="info">
+        <p>La ansiedad es una reacción natural del cuerpo ante el estrés. Aunque todos experimentamos ansiedad en algún momento, cuando se vuelve excesiva, puede interferir con las actividades cotidianas. Puede manifestarse como una preocupación constante o sensaciones físicas como palpitaciones.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Síntomas de la ansiedad</h2>
+      <div class="info">
+        <p>La ansiedad puede manifestarse como preocupación constante, nerviosismo, palpitaciones o problemas para dormir.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Consecuencias de no gestionarla</h2>
+      <div class="info">
+        <p>No tratar la ansiedad puede derivar en trastornos más graves, problemas de salud física o dificultades en las relaciones personales y laborales.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Buscar ayuda es importante</h2>
+      <div class="info">
+        <p>Hablar con un profesional o alguien de confianza puede ser clave para manejar la ansiedad de manera efectiva. No estás solo/a en esto.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="solucion">
+    <h2>¿Cómo manejar la ansiedad?</h2>
+    <a href="ansiedad2.html">Explorar consejos y soluciones</a>
+  </div>
+
+  <button class="boton-cuentame" onclick="window.location.href='escribir.html'">Cuéntame tu día</button>
+  
+  <a href="../index.html" class="volver-btn">Volver</a>
+
+</body>
+</html>

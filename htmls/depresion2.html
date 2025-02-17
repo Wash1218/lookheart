@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consejos para Superar la Depresión</title>
+  <style>
+    body {
+      background-image: url('https://imgur.com/ZfGcazK');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: rgb(163, 75, 163);
+    }
+
+    h1 {
+      text-align: center;
+      color: #612d66;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Cuatro columnas por fila */
+      gap: 20px; /* Espacio entre los cuadros */
+      max-width: 1200px;
+      margin: 0 auto; /* Centrar el contenedor */
+    }
+
+    .section {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .section h2 {
+      color: #a54986;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .botones-extremos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    .boton-cuentame, .boton-distraccion, .volver-btn {
+      padding: 12px 30px;
+      background-color: #a54986;
+      color: white;
+      font-size: 14px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .boton-cuentame:hover, .boton-distraccion:hover, .volver-btn:hover {
+      background-color: #A770DB;
+    }
+
+    .mensaje-izquierda {
+      text-align: left;
+      width: 48%;
+    }
+
+    .distraccion-derecha {
+      text-align: right;
+      width: 48%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Consejos para Superar la Depresión</h1>
+
+  <div class="container">
+    <div class="section">
+      <h2>1. Habla sobre lo que sientes</h2>
+      <p>Hablar con alguien de confianza o un terapeuta puede aliviar tus emociones. No guardes tus pensamientos para ti.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Establece una rutina</h2>
+      <p>Levántate a la misma hora, come de forma regular y realiza actividades pequeñas pero constantes.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. Haz ejercicio</h2>
+      <p>El ejercicio libera endorfinas que mejoran tu estado de ánimo. Comienza con caminatas diarias o yoga.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. Mantén una dieta balanceada</h2>
+      <p>Come alimentos ricos en nutrientes. Evita el azúcar, cafeína y alcohol en exceso.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Duerme lo suficiente</h2>
+      <p>Establece una rutina de sueño y evita pantallas antes de acostarte.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Encuentra hobbies</h2>
+      <p>Involúcrate en actividades como leer, escuchar música o practicar arte.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Medita</h2>
+      <p>La meditación y el mindfulness reducen el estrés y ayudan a frenar pensamientos negativos.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. No te aísles</h2>
+      <p>Busca compañía. Sal a caminar o habla con amigos y familiares.</p>
+    </div>
+  </div>
+
+  <div class="botones-extremos">
+    <div class="mensaje-izquierda">
+      <h2>¿Necesitas distraerte?</h2>
+      <p>Tomar un descanso y realizar actividades relajantes puede ayudarte a mejorar tu estado de ánimo.</p>
+      <button class="boton-distraccion" onclick="window.location.href='distraccion2.html'">Sí, me parece bien</button>
+      <a href="depresion.html" class="volver-btn">Volver a la Información</a>
+    </div>
+    <div class="distraccion-derecha">
+      <h2>¿Necesitas hablar?</h2>
+      <p>Puedo escucharte. Cuéntame cómo te sientes hoy.</p>
+      <button class="boton-cuentame" onclick="window.location.href='escribir.html'">Cuéntame tu día</button>
+    </div>
+  </div>
+
+</body>
+</html>

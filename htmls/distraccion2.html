@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Distracciones</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://imgur.com/7ws25XI'); /* Cambia esta URL por la ruta de tu imagen */
+      background-size: cover; /* La imagen cubre toda la pantalla */
+      background-position: center; /* Centra la imagen */
+      background-attachment: fixed; /* Hace que la imagen se quede fija al hacer scroll */
+      margin: 0;
+      padding: 0;
+      color: #333;
+      height: 100vh; /* Asegura que la página ocupe toda la altura */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Todo hacia arriba */
+    }
+
+    h1 {
+      text-align: center;
+      color: #8c4b94;
+      font-size: 36px;
+      margin-top: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px;
+      gap: 30px;
+      flex-grow: 1; /* Esto permite que las secciones crezcan y ocupen el espacio disponible */
+      align-items: flex-start; /* Alineación de las secciones hacia la parte superior */
+    }
+
+    /* Estilo de las secciones */
+    .section {
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 48%;
+    }
+
+    .section h2 {
+      color: #8c4b94;
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    /* Cuadritos alineados */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .grid-item {
+      background-color: #8c4b94;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      width: 90%; /* Los cuadros ocupan el 90% del ancho disponible */
+      height: 100px; /* Tamaño más pequeño */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold; /* Hacer el texto más grueso */
+    }
+
+    .grid-item:hover {
+      background-color: #7b3b74;
+      transform: translateY(-5px);
+    }
+
+    .grid-item a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px; /* Aumento del tamaño de fuente */
+      margin-top: 10px;
+      font-weight: bold; /* Hacer el texto más grueso */
+    }
+
+    .grid-item h3 {
+      font-size: 18px; /* Aumento del tamaño de fuente */
+      margin-bottom: 10px;
+    }
+
+    /* Botón de regreso */
+    .btn-back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #8c4b94;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-back:hover {
+      background-color: #7b3b74;
+    }
+
+    /* Estilos del contenedor de botones */
+    .container-btns {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* Responsive: Adaptación en dispositivos móviles */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section {
+        width: 80%;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr; /* Solo una columna en móviles */
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>¡Distráete y Cuídate!</h1>
+
+  <div class="container">
+    <!-- Sección de Videos -->
+    <div class="section">
+      <h2>Videos Recomendados</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>¿TE GUSTA LA MUSICA?</h3>
+          <a href="https://www.youtube.com/playlist?list=PLJGEY7ccQ7V0InCyUYCUT5sIENWx34cA5" target="_blank">👉🏼 CLICK AQUI 👈🏼</a>
+        </div>
+        <div class="grid-item">
+          <h3> ¿QUIERES SABER QUE ES LA DEPRESIÓN?</h3>
+          <a href="https://www.youtube.com/watch?v=oa-JpB3ZZrc&rco=1" target="_blank">👉🏼 CLICK AQUI 👈🏼</a>
+        </div>
+        <div class="grid-item">
+          <h3>DEPRESION ¿QUE ES? ¿POR QUE OCURRE?</h3>
+          <a href="https://www.youtube.com/watch?v=WIb4B79B9zQ" target="_blank">👉🏼 CLICK AQUI 👈🏼</a>
+        </div>
+        <div class="grid-item">
+          <h3>¿CUALES SON LOS SINTOMAS DE LA DEPRESION?</h3>
+          <a href="https://www.youtube.com/watch?v=pRvLmNmrBZU" target="_blank">👉🏼 CLICK AQUI 👈🏼</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Juegos -->
+    <div class="section">
+      <h2>Juegos para Distracción</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>AVENTURA ESPACIAL</h3>
+          <a href="juego.html">👉🏼 CLICK AQUI 👈🏼</a>
+        </div>
+        <div class="grid-item">
+          <h3>PRUEBA TU MEMORIA!!</h3>
+          <a href="juego2.html">👉🏼 CLICK AQUI 👈🏼</a>
+        </div>
+        <div class="grid-item">
+          <h3>JUEGO DE TETRIS!!</h3>
+          <a href="juego3.html">👉🏼 CLICK AQUI 👈🏼</a>
+        </div>
+        <div class="grid-item">
+          <h3>SNAKE GAME</h3>
+          <a href="juego4.html">👉🏼 CLICK AQUI 👈🏼</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón de Volver -->
+  <div class="container-btns">
+    <a class="btn-back" href="depresion2.html">Volver a Consejos</a>
+  </div>
+
+</body>
+</html>

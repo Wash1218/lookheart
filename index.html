@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenida</title>
+  <style>
+    /* Apartado fondo de la aplicación */
+    body {
+      background-image: url('https://imgur.com/1eyFXEI');  /* Reemplaza con la URL de tu imagen */
+      background-size: cover;  /* La imagen cubre toda la pantalla */
+      background-position: center;  /* Centra la imagen */
+      background-attachment: fixed;  /* Mantiene el fondo fijo */
+      font-family: Ink Free, Showcard Gothic;  /* Tipo de Letra */
+      color: rgb(95, 2, 104);  /* Color del texto */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos para el contenedor de opciones */
+    .opciones-container {
+      display: flex;
+      gap: 30px;
+      padding: 50px;
+      justify-content: center;
+      flex-wrap: wrap;  /* Permite que las opciones se acomoden en varias filas si no hay espacio */
+    }
+
+    /* Apartado de cuadros de opciones */
+    .opcion {
+      width: 180px;  
+      height: 180px;  /* Tamaño más grande */
+      background-color: rgba(165, 73, 134, 0.85);  /* Fondo semitransparente */
+      color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 16px;  /* Bordes más redondeados */
+      transition: background-color 0.3s, transform 0.3s;
+      font-size: 22px;  /* Tamaño de texto más grande */
+      font-weight: bold;  /* Texto en negrita */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Sombra más pronunciada */
+    }
+
+    .opcion:hover {
+      background-color: rgba(167, 112, 219, 0.95);  /* Cambio de color al pasar el mouse */
+      transform: scale(1.1);  /* Efecto de agrandamiento */
+    }
+
+    .opcion.seleccionada {
+      background-color: #FF6347;  /* Cambia el color al hacer clic */
+      box-shadow: 0 0 20px rgba(255, 253, 253, 0.5);  
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 30px;  /* Título más grande */
+      text-shadow: 2px 2px 6px rgba(15, 15, 15, 0.6);  /* Sombra para resaltar */
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Saludo de bienvenida -->
+  <h2>¡Bienvenido, <span id="nombreUsuario"></span>!</h2>
+
+  <!-- INTERFAZ DE LA SELECCIÓN DE OPCIONES--> 
+  <h2>¿Cómo te has estado sintiendo últimamente en cuanto a tu bienestar emocional?</h2>
+  <h2>¿Has experimentado alguna de estas situaciones recientemente?</h2>
+
+  <div class="opciones-container">
+    <div class="opcion" onclick="seleccionarOpcion('htmls/tristeza.html')">Tristeza profunda</div>
+    <div class="opcion" onclick="seleccionarOpcion('htmls/ansiedad.html')">Ansiedad o estrés</div>
+    <div class="opcion" onclick="seleccionarOpcion('htmls/depresion.html')">Depresión</div>
+    <div class="opcion" onclick="seleccionarOpcion('htmls/ira.html')">Problemas de Ira</div>
+  </div>
+
+  <script>
+    // OBTENCIÓN DEL NOMBRE DE USUARIO
+    const nombreUsuario = localStorage.getItem('nombreUsuario') || 'Invitado';
+
+    document.getElementById("nombreUsuario").textContent = nombreUsuario;
+
+    // REDIRECCIONAMIENTO A DEMÁS HTMLS
+    function seleccionarOpcion(ruta) {
+      window.location.href = ruta;
+    }
+  </script>
+
+</body>
+</html>
