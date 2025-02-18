@@ -13,7 +13,7 @@
       margin: 0;
       font-family: 'Arial', sans-serif;
       flex-direction: column;
-      background-image: url('https://imgur.com/a8FxonK'); /* Ruta de tu imagen */
+      background-image: url('https://imgur.com/a8FxonK'); 
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -103,7 +103,7 @@
     // Función para barajar las cartas y reiniciar el juego
     function restartGame() {
       shuffledEmojis = emojis.sort(() => 0.5 - Math.random());
-      gameBoard.innerHTML = ''; // Limpiar las cartas actuales
+      gameBoard.innerHTML = ''; 
       matchedCards = [];
       selectedCards = [];
       createCards();
