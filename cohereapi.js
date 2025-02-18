@@ -26,7 +26,7 @@ async function obtenerRespuestaIA(textoUsuario) {
         }
 
         const data = await response.json();
-        console.log("Respuesta de OpenAI:", data); // Verificar lo que devuelve la API
+        console.log("Respuesta de OpenAI:", data); 
 
         if (data.choices && data.choices.length > 0) {
             const aiResponse = data.choices[0].message.content;
@@ -36,7 +36,7 @@ async function obtenerRespuestaIA(textoUsuario) {
             document.getElementById('respuesta').innerText = "No se pudo obtener una respuesta válida.";
         }
     } catch (error) {
-        console.error('Error:', error); // Esto nos ayudará a ver el error en la consola
+        console.error('Error:', error); 
         document.getElementById('respuesta').innerText = 'Ocurrió un error. Por favor, intenta de nuevo.';
     }
 }
