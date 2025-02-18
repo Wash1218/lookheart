@@ -10,7 +10,7 @@ function createWindow() {
     },
   });
 
-  // Cargar tu archivo HTML
+  
   win.loadFile('registro.html');
 }
 
