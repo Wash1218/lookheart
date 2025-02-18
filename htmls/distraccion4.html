@@ -8,17 +8,17 @@
     /* Estilos generales */
     body {
       font-family: 'Arial', sans-serif;
-      background-image: url('https://imgur.com/7ws25XI'); /* Cambia esta URL por la ruta de tu imagen */
-      background-size: cover; /* La imagen cubre toda la pantalla */
-      background-position: center; /* Centra la imagen */
-      background-attachment: fixed; /* Hace que la imagen se quede fija al hacer scroll */
+      background-image: url('https://imgur.com/7ws25XI'); 
+      background-size: cover; 
+      background-position: center; 
+      background-attachment: fixed; 
       margin: 0;
       padding: 0;
       color: #333;
-      height: 100vh; /* Asegura que la página ocupe toda la altura */
+      height: 100vh; 
       display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* Todo hacia arriba */
+      justify-content: flex-start;
     }
 
     h1 {
@@ -34,13 +34,13 @@
       justify-content: space-between;
       margin: 30px;
       gap: 30px;
-      flex-grow: 1; /* Esto permite que las secciones crezcan y ocupen el espacio disponible */
-      align-items: flex-start; /* Alineación de las secciones hacia la parte superior */
+      flex-grow: 1; 
+      align-items: flex-start; 
     }
 
     /* Estilo de las secciones */
     .section {
-      background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+      background-color: rgba(255, 255, 255, 0.8);
       border-radius: 12px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       padding: 20px;
@@ -59,7 +59,7 @@
     /* Cuadritos alineados */
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+      grid-template-columns: repeat(2, 1fr); 
       gap: 20px;
       justify-items: center;
     }
@@ -72,13 +72,13 @@
       text-align: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, background-color 0.3s ease;
-      width: 90%; /* Los cuadros ocupan el 90% del ancho disponible */
-      height: 100px; /* Tamaño más pequeño */
+      width: 90%; 
+      height: 100px; 
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      font-weight: bold; /* Hacer el texto más grueso */
+      font-weight: bold; 
     }
 
     .grid-item:hover {
@@ -89,13 +89,13 @@
     .grid-item a {
       color: white;
       text-decoration: none;
-      font-size: 18px; /* Aumento del tamaño de fuente */
+      font-size: 18px; 
       margin-top: 10px;
-      font-weight: bold; /* Hacer el texto más grueso */
+      font-weight: bold; 
     }
 
     .grid-item h3 {
-      font-size: 18px; /* Aumento del tamaño de fuente */
+      font-size: 18px; 
       margin-bottom: 10px;
     }
 
@@ -142,7 +142,7 @@
       }
 
       .grid-container {
-        grid-template-columns: 1fr; /* Solo una columna en móviles */
+        grid-template-columns: 1fr; 
       }
     }
 
